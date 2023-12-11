@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          # symplify/rule-doc-generator 11.1.25 requires php >=8.1
           composer remove --dev symplify/rule-doc-generator
           composer install --no-interaction --prefer-dist --optimize-autoloader
 
