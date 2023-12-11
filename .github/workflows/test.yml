@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer remove symplify/rule-doc-generator
+          composer remove --dev symplify/rule-doc-generator
           composer install --no-interaction --prefer-dist --optimize-autoloader
 
       - name: Run tests
