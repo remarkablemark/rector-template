@@ -3,7 +3,7 @@
 [![packagist](https://img.shields.io/packagist/v/remarkablemark/rector-template)](https://packagist.org/packages/remarkablemark/rector-template)
 [![test](https://github.com/remarkablemark/rector-template/actions/workflows/test.yml/badge.svg)](https://github.com/remarkablemark/rector-template/actions/workflows/test.yml)
 
-[Rector](https://github.com/rectorphp/rector) template
+[Rector](https://github.com/rectorphp/rector) template. Example from Rector [custom rule](https://getrector.com/documentation/custom-rule).
 
 ## Requirements
 
@@ -50,6 +50,20 @@ Clear the cache and apply the rule:
 
 ```php
 vendor/bin/rector process --clear-cache
+```
+
+## Rule
+
+### Before
+
+```php
+$user->setPassword('123456');
+```
+
+### After
+
+```php
+$user->changePassword('123456');
 ```
 
 ## License
