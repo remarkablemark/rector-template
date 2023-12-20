@@ -4,6 +4,8 @@
     "description": "Rector template",
     "keywords": [
         "rector",
+        "refactor",
+        "codemod",
         "template"
     ],
     "license": "MIT",
