@@ -31,7 +31,7 @@ use Remarkablemark\RectorTemplate\ExampleRector;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([
-        __DIR__ . '/tests',
+        __DIR__,
     ]);
     $rectorConfig->rule(ExampleRector::class);
 };
