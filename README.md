@@ -30,6 +30,9 @@ use Rector\Config\RectorConfig;
 use Remarkablemark\RectorTemplate\ExampleRector;
 
 return static function (RectorConfig $rectorConfig): void {
+    $rectorConfig->paths([
+        __DIR__ . '/tests',
+    ]);
     $rectorConfig->rule(ExampleRector::class);
 };
 ```
