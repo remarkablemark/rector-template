@@ -7,7 +7,7 @@ namespace Remarkablemark\RectorTemplate;
 use PhpParser\Node;
 use PhpParser\Node\Expr\MethodCall;
 use PhpParser\Node\Identifier;
-use Rector\Core\Rector\AbstractRector;
+use Rector\Rector\AbstractRector;
 use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
@@ -15,6 +15,7 @@ final class ExampleRector extends AbstractRector
 {
     /**
      * @see https://github.com/rectorphp/php-parser-nodes-docs/
+     *
      * @return array<class-string<Node>>
      */
     public function getNodeTypes(): array
@@ -29,7 +30,7 @@ final class ExampleRector extends AbstractRector
     {
         $methodName = $this->getName($node->name);
 
-        if (! str_starts_with((string) $methodName, 'set')) {
+        if (!str_starts_with((string) $methodName, 'set')) {
             return null;
         }
 
@@ -42,7 +43,8 @@ final class ExampleRector extends AbstractRector
     public function getRuleDefinition(): RuleDefinition
     {
         return new RuleDefinition(
-            'Change method calls from set* to change*.', [
+            'Change method calls from set* to change*.',
+            [
                 new CodeSample(
                     // code before
                     '$user->setPassword("123456");',
