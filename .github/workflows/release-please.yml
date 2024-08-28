@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  release:
+  release-please:
     runs-on: ubuntu-latest
     steps:
       - name: Release Please
